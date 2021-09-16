@@ -1,13 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .my-container {
     width: 85%;
-    margin: 0px auto 0px auto;
-
+    margin: auto  auto;
+    overflow: hidden;
 }
 
 body {
     width: 100%;
-    height: 8000px;
+    height: auto;
+}
 
+.none {
+    display: none;
+}
+
+.style-h2 {
+    margin: auto;
+    font-size: 65px;
+    font-weight: 900;
+    color: #50658e;
+    text-transform: uppercase;
+}
+
+.style-h3 {
+      color: #2a81ea;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.style-p {
+    margin: 50px 0;
+    color: #3d4b69;
+    line-height: 1.5em;
 }
 
 .btn {
@@ -19,20 +51,32 @@ body {
     border: none;
     border-radius: 23px;
 }
+.btn:hover{
+    background-color: #1468cd;
+    color: white;
+}
+
+
+
 
 
 /*=============================== */
-
-/*.navbar{
-    display: flex;
-    margin: 10px 0 ; 
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.75rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem
 }
-.navbar .navbar-toggler{
-    
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: 50%/100% 100% no-repeat
 }
-.navbar .navbar-brand {
-    flex: 12;
-}*/
 /*===========================================*/
 header {
     margin: 10px 0 0 0;
@@ -40,7 +84,8 @@ header {
     width: 100%;
     z-index: 100;
     top: 0;
-    position: sticky;
+    margin: 0;
+    position: fixed;
 
 }
 
@@ -49,6 +94,8 @@ header .my-navbar {
     background-color: #F7F9FE;
     height: 70px;
     box-shadow: 0px 0 50px 0px rgb(80 101 142 / 8%);
+    display: flex;
+    align-items: center;
 }
 
 header .my-navbar .navbar-brand {
@@ -94,6 +141,71 @@ header .my-navbar .nav-list .nav-item a:hover {
     color: #2a81ea !important;
 }
 
+/*=============*/
+header .sm-navbar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+   background-color: rgba(27, 71, 161, 0.8);
+}
+
+header .sm-navbar ul {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: white;
+    padding: 30px;
+}
+
+header .sm-navbar ul li {
+    list-style: none;
+    margin: 15px;
+}
+header .sm-navbar ul li a {
+    text-decoration: none;
+    color: #50658e;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+header .sm-navbar .close-icon {
+    cursor: pointer;
+    position: fixed;
+    right: 9%;
+    top: 4%;
+    z-index: 100;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f9fe;
+    border-radius: 50%;
+}
+
+
+header .sm-navbar .close-icon i {
+    font-size: 40px;
+    color: #50658e;
+    pointer-events: none;
+}
+
+header .sm-navbar .blue-back{
+    background-color: rgba(27, 71, 161, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
 
 /*============================================================*/
 /*==================== Homeeee ==============================*/
@@ -108,31 +220,6 @@ header .my-navbar .nav-list .nav-item a:hover {
     text-align: center;
     width: 100%;
 
-}
-
-.home-section .home-top-header h2 {
-     margin: auto;
-    font-size: 65px;
-    font-weight: 900;
-    color: #50658e;
-    text-transform: uppercase;
-
-}
-
-.home-section .home-top-header h3 {
-    margin: auto;
-    font-size: 65px;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #FF5363;
-
-
-}
-
-.home-section .top-p {
-    margin: 50px 0;
-    color: #3d4b69;
-    line-height: 1.5em;
 }
 
 .home-section .home-btns {
@@ -208,23 +295,15 @@ header .my-navbar .nav-list .nav-item a:hover {
     align-items: center;
 }
 
-.about-section .about-txt {}
+
 
 .about-section .about-txt h2 {
-    color: #50658e;
     font-size: 42px;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 25px;
 }
 
 .about-section .about-txt h3 {
-    color: #2a81ea;
+
     font-size: 18px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 7px;
-    font-weight: bold;
 }
 
 .about-section .about-txt p {
@@ -249,7 +328,7 @@ header .my-navbar .nav-list .nav-item a:hover {
     line-height: 1.7em;
 }
 
-.about-section .about-list {}
+
 
 .about-section .about-list .card {
     width: 100%;
@@ -264,6 +343,7 @@ header .my-navbar .nav-list .nav-item a:hover {
 }
 
 .about-section .about-list .card .list-group {
+    width: 100%;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -273,14 +353,30 @@ header .my-navbar .nav-list .nav-item a:hover {
 }
 
 .about-section .about-list .card .list-group .list-group-item {
+    color: #465675;
+    font-size: 16px;
     padding: 20px 30px;
-    border-bottom: 1px solid #e7e8ff;
-    text-decoration: none;
-    color: #2a81ea;
+    font-weight: 600;
     border-bottom: 1px solid #e7e8ff;
     display: flex;
     justify-content: space-between;
-    font-weight: normal;
+    align-items: center;
+}
+
+.about-section .about-list .card .list-group .list-group-item a {
+    text-decoration: none;
+    color: #2a81ea;
+    font-size: 16px;
+}
+
+.about-section .about-list .card .list-group .list-group-item a:hover{
+    text-decoration: none;
+    color: #1d5ba7;
+    font-size: 16px;
+}
+
+.about-section .about-list .card .list-group .list-group-item i {
+    color: #2a81ea;
     font-size: 16px;
 }
 
@@ -292,37 +388,28 @@ header .my-navbar .nav-list .nav-item a:hover {
 }
 
 .spreading h3 {
-    color: #2a81ea;
     font-size: 18px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 7px;
-    font-weight: bold;
 }
 
 .spreading h2 {
-    color: #50658e;
     font-size: 42px;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 25px;
 }
 
 .spreading p {
-    color: #3d4b69;
-    line-height: 1.5em;
-    margin-bottom: 20px;
+    margin: 0 auto;
 }
 
-.spreading .spreading-card {
-    margin: 0 auto;
 
+.spreading .spreading-card h3 {
+    color: #2a81ea;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .spreading .spreading-card-img-container {
     width: 100%;
-    margin: 10px 0;
-
+    margin: 10px auto;
+    
 }
 
 .spreading .spreading-card-img-container img {
@@ -344,26 +431,15 @@ header .my-navbar .nav-list .nav-item a:hover {
 }
 
 .symptoms h3 {
-    color: #2a81ea;
     font-size: 18px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 7px;
-    font-weight: bold;
 }
 
 .symptoms h2 {
-    color: #50658e;
     font-size: 42px;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 25px;
 }
 
 .symptoms p {
-    color: #3d4b69;
-    line-height: 1.5em;
-    margin-bottom: 20px;
+    margin:10px auto;
 }
 
 .symptoms .symptoms-cards-list .symptoms-card .symptoms-card-txt h3 {
@@ -432,27 +508,15 @@ header .my-navbar .nav-list .nav-item a:hover {
 
 .prevention h3 {
     text-align: center;
-    color: #2a81ea;
     font-size: 18px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 7px;
-    font-weight: bold;
 }
 
 .prevention h2 {
-    color: #50658e;
     font-size: 42px;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 25px;
 }
 
 .prevention p {
-    text-align: center;
-    color: #3d4b69;
-    line-height: 1.5em;
-    margin-bottom: 20px;
+    margin: 10px auto;
 }
 
 .prevention .prevention-cards-list {
@@ -565,16 +629,13 @@ header .my-navbar .nav-list .nav-item a:hover {
 }
 
 .follow-steps h2 {
-    margin-bottom: 20px;
-    color: #465675;
     font-size: 30px;
-    font-weight: bold;
 }
 
 .follow-steps a{
     text-decoration: none;
     font-size: 20px;
-    margin-top: 20px;
+    margin: 10px auto 0 0;
     word-spacing: 2px;
 }
 
@@ -612,24 +673,19 @@ header .my-navbar .nav-list .nav-item a:hover {
     padding: 100px 0;
 }
 
-.treatment .treatment-txt{
-    
-}
+
 
 .treatment .treatment-txt h2 {
     color: #73e3ff;
     font-size: 18px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    letter-spacing: 0.2em;
     margin-bottom: 7px;
-    font-weight: bold;
 }
 
 .treatment .treatment-txt h3 {
     color: white;
     font-size: 35px;
     word-wrap: none;
-    font-family: 'Oswald', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 25px;

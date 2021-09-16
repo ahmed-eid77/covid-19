@@ -21,17 +21,20 @@
     <!--=================== NavBar Section ===========================================-->
     <header>
         <div class="my-container">
-            <nav class="my-navbar navbar navbar-expand-lg">
+            <nav class="my-navbar navbar navbar-expand-lg ">
                 <div class="my-navbrand wow slideInLeft">
-                    <h1 class="navbar-brand">C <span><i class="fas fa-virus"
-                                style="font-size: 30px; color: #FF5363;"></i></span> VID <span> 19</span></h1>
+                    <h1 class="navbar-brand">C <span>
+                            <i class="fas fa-virus" style="font-size: 30px; color: #FF5363;"></i>
+                        </span> VID <span> 19</span>
+                    </h1>
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <!--Toggle button-->
+                <button class="navbar-toggler" type="button">
+                    <div>
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </button>
-
+                <!--Navbar menu-->
                 <div class="nav-list-container collapse navbar-collapse wow slideInRight" id="navbarSupportedContent">
                     <ul class="nav-list navbar-nav">
                         <li class="nav-item active">
@@ -47,24 +50,47 @@
                             <a class="nav-link" href="#prevention">Prevention</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Treatment</a>
+                            <a class="nav-link" href="#treatment">Treatment</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">FAQ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">News</a>
+                            <a class="nav-link" href="#news">News</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="#do-section">
                                 <button class="btn">do &amp; don’t</button>
                             </a>
                         </li>
                     </ul>
                 </div>
             </nav>
+            <!--small screen navbar-->
+            <div class="sm-navbar none wow fadeInDown">
+                <div class="blue-back"></div>
+                <button class="close-icon">
+                    <i class="fas fa-times-circle"></i>
+                </button>
+
+                <ul class="sm-nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-corona">About Corona</a></li>
+                    <li><a href="#symptoms">Symptoms</a></li>
+                    <li><a href="#prevention">Prevention</a></li>
+                    <li><a href="#treatment">Treatment</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li>
+                        <a href="#do-section">
+                            <button class="btn">do &amp; don’t</button>
+                        </a>
+                    </li>>
+                </ul>
+            </div>
         </div>
     </header>
+
 
     <!--================= HOME ===========================-->
     <section class="home-section wow" id="home">
@@ -75,12 +101,13 @@
                         <div class="home-top-header col-12 wow bounceInDown">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <h2 class=" m-auto col-lg-6 col-12">CORONA</h2>
-                                    <h3 class=" m-auto col-lg-6 col-12">virus </h3>
+                                    <h2 class=" style-h2 m-auto col-lg-6 col-12">CORONA</h2>
+                                    <h2 class=" style-h2 m-auto col-lg-6 col-12" style="color: #FF5363;">virus </h2>
                                 </div>
                             </div>
                         </div>
-                        <p class="top-p wow bounceInLeft">The coronavirus (COVID-19) was first reported in Wuhan, hubei,
+                        <p class="style-p wow bounceInLeft">The coronavirus (COVID-19) was first reported in
+                            Wuhan, hubei,
                             china in december 2019,
                             the
                             outbreak was later recognized as a pandemic by the World Health organization
@@ -89,9 +116,9 @@
                         <div class="home-btns m-auto text-center wow bounceInRight">
                             <div class="container">
                                 <div class="row">
-                                    <button class="btn col-12 col-lg-6">how to protect <span><i
-                                                class="fas fa-shield-alt"></i></span></button>
-                                    <a href="#about" class="about-btn col-12 col-lg-6">About COVID-19 <span><i
+                                    <a href="#do-section" class="col-12 col-lg-6 m-auto"><button class="btn">how to protect <span><i
+                                                    class="fas fa-shield-alt"></i></span></button></a>
+                                    <a href="#about-corona" class="about-btn col-12 col-lg-6">About COVID-19 <span><i
                                                 class="fas fa-arrow-right"></i></span></a>
                                 </div>
                             </div>
@@ -132,8 +159,8 @@
             <div class="container-fluid">
                 <div class="row about-section-content">
                     <div class="about-txt col-12 col-lg-7 mr-auto wow bounceInRight">
-                        <h3>ABOUT THE DISEASE</h3>
-                        <h2>CORONAVIRUS (COVID-19)</h2>
+                        <h3 class="style-h3">ABOUT THE DISEASE</h3>
+                        <h2 class="style-h2">CORONAVIRUS (COVID-19)</h2>
                         <p>COVID-19 is a new illness that can affect your lungs and airways.</p>
                         <p>It's caused by a virus called coronavirus. It was discovered in December 2019 in Wuhan,
                             Hubei, China.</p>
@@ -151,17 +178,17 @@
                                 Featured
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><a href="">How coronavirus is spread</a><i
+                                <li class="list-group-item"><a href="#spreading">How coronavirus is spread</a><i
                                         class="fas fa-arrow-right"></i></li>
-                                <li class="list-group-item"><a href="">Symptoms of coronavirus</a><i
+                                <li class="list-group-item"><a href="#symptoms">Symptoms of coronavirus</a><i
                                         class="fas fa-arrow-right"></i></li>
-                                <li class="list-group-item"><a href="">How to protect yourself</a><i
+                                <li class="list-group-item"><a href="#do-section">How to protect yourself</a><i
                                         class="fas fa-arrow-right"></i></li>
-                                <li class="list-group-item"><a href="">Treatment for coronavirus</a><i
+                                <li class="list-group-item"><a href="#treatment">Treatment for coronavirus</a><i
                                         class="fas fa-arrow-right"></i></li>
-                                <li class="list-group-item"><a href="">Myth-Busters of coronavirus</a><i
+                                <li class="list-group-item"><a href="#">Myth-Busters of coronavirus</a><i
                                         class="fas fa-arrow-right"></i></li>
-                                <li class="list-group-item"><a href="">Questions & answers</a><i
+                                <li class="list-group-item"><a href="#">Questions & answers</a><i
                                         class="fas fa-arrow-right"></i></li>
 
                             </ul>
@@ -173,13 +200,13 @@
     </section>
 
     <!--========================= Corona Spread ===============-->
-    <section class="spreading">
+    <section class="spreading" id="spreading">
         <div class="my-container">
             <div class="container-fluid">
                 <div class="row">
-                    <h3 class="col-12 text-center">HOW CORONAVIRUS IS SPREAD</h3>
-                    <h2 class="col-12 text-center">TRANSMISSION OF COVID-19</h2>
-                    <p style="margin: auto; text-align: center;">Because it's a new illness, we do not know exactly how
+                    <h3 class="style-h3 col-12 text-center">HOW CORONAVIRUS IS SPREAD</h3>
+                    <h2 class="style-h2 col-12 text-center">TRANSMISSION OF COVID-19</h2>
+                    <p class="style-p" style="margin: auto; text-align: center;">Because it's a new illness, we do not know exactly how
                         coronavirus spreads from person to person. Similar viruses are spread in cough droplets.</p>
                     <div class="spreading-card wow slideInLeft">
                         <div class="container-fluid">
@@ -188,21 +215,21 @@
                                     <div class="spreading-card-img-container"><img src="./img/spread-a.png" alt="">
                                     </div>
                                     <h3>Person-to-person spread as close contact with infected</h3>
-                                    <p>The coronavirus is thought to spread mainly from person to person. This can
+                                    <p class="style-p">The coronavirus is thought to spread mainly from person to person. This can
                                         happen between people who are in close contact with one another.</p>
                                 </div>
                                 <div class="col-12 col-lg-4 wow bounceInDown">
                                     <div class="spreading-card-img-container"><img src="./img/spread-b.png" alt="">
                                     </div>
                                     <h3>Touching or contact with infected surfaces or objects</h3>
-                                    <p>A person can get COVID-19 by touching a surface or object that has the virus on
+                                    <p class="style-p">A person can get COVID-19 by touching a surface or object that has the virus on
                                         it and then touching their own mouth, nose, or possibly their eyes.</p>
                                 </div>
                                 <div class="col-12 col-lg-4 wow bounceInUp bounceInLeft">
                                     <div class="spreading-card-img-container "><img src="./img/spread-c.png" alt="">
                                     </div>
                                     <h3>Droplets that from infected person coughs or sneezes</h3>
-                                    <p>The coronavirus is thought to spread mainly from person to person. This can
+                                    <p class="style-p">The coronavirus is thought to spread mainly from person to person. This can
                                         happen between people who are in close contact with one another.</p>
                                 </div>
                             </div>
@@ -221,9 +248,9 @@
         <div class="my-container">
             <div class="container-fluid">
                 <div class="row">
-                    <h3 class="col-12 text-center">WHAT ARE THE SYMPTOMS OF COVID-19 ?</h3>
-                    <h2 class="col-12 text-center">SYMPTOMS OF CORONAVIRUS</h2>
-                    <p style="margin: auto; text-align: center;">The most common symptoms of COVID-19 are fever,
+                    <h3 class="style-h3 col-12 text-center">WHAT ARE THE SYMPTOMS OF COVID-19 ?</h3>
+                    <h2 class="style-h2 col-12 text-center">SYMPTOMS OF CORONAVIRUS</h2>
+                    <p class="style-p">The most common symptoms of COVID-19 are fever,
                         tiredness, and dry cough. Some patients may have aches and pains, nasal congestion, runny nose,
                         sore throat or diarrhea. These symptoms are usually mild and begin gradually. Also the symptoms
                         may appear 2-14 days after exposure.</p>
@@ -235,8 +262,8 @@
                                         <img src="./img/symptom-a.png" alt="">
                                     </div>
                                     <div class="symptoms-card-txt">
-                                        <h3>Fever</h3>
-                                        <p> <span>High Fever </span> – this means you feel hot to touch on your chest or
+                                        <h3 class="style-h3">Fever</h3>
+                                        <p class="style-p"> <span>High Fever </span> – this means you feel hot to touch on your chest or
                                             back (you do not need to measure your temperature). It is a common sign and
                                             also may appear in 2-10 days if you affected</p>
                                     </div>
@@ -246,8 +273,8 @@
                                         <img src="./img/symptom-b.png" alt="">
                                     </div>
                                     <div class="symptoms-card-txt">
-                                        <h3>Cough</h3>
-                                        <p> <span>Continuous cough </span> – this means coughing a lot for more than an
+                                        <h3 class="style-h3">Cough</h3>
+                                        <p class="style-p"> <span>Continuous cough </span> – this means coughing a lot for more than an
                                             hour, or 3 or more coughing episodes in 24 hours (if you usually have a
                                             cough, it may be worse than usual).</p>
                                     </div>
@@ -257,8 +284,8 @@
                                         <img src="./img/symptom-c.png" alt="">
                                     </div>
                                     <div class="symptoms-card-txt">
-                                        <h3>hortness of breath</h3>
-                                        <p> <span>Difficulty breathing </span> – Around 1 out of every 6 people who gets
+                                        <h3 class="style-h3">hortness of breath</h3>
+                                        <p class="style-p"> <span>Difficulty breathing </span> – Around 1 out of every 6 people who gets
                                             COVID-19 becomes seriously ill and develops difficulty breathing or
                                             shortness of breath.</p>
                                     </div>
@@ -271,7 +298,7 @@
                             <div class="row">
                                 <i class="fas fa-exclamation-triangle"
                                     style="color: #2a81ea; font-size: 48px; display: inline-block;"></i>
-                                <p class="col-12 col-lg-7"><span>Stay at home and call your doctor:</span> <em>If you
+                                <p class="style-p col-12 col-lg-7"><span>Stay at home and call your doctor:</span> <em>If you
                                         think you
                                         have been exposed to COVID-19 and develop a fever and any symptoms, such as
                                         cough or difficulty breathing, call your healthcare provider as soon as possible
@@ -292,9 +319,9 @@
         <div class="my-container">
             <div class="container-fluid">
                 <div class="row">
-                    <h3 class="col-12 text-center">HOW TO PROTECT YOURSELF</h3>
-                    <h2 class="col-12 text-center">PREVENTION & ADVICE</h2>
-                    <p style="margin: auto; text-align: center;">There is currently no vaccine to prevent coronavirus
+                    <h3 class="style-h3 col-12 text-center">HOW TO PROTECT YOURSELF</h3>
+                    <h2 class="style-h2 col-12 text-center">PREVENTION & ADVICE</h2>
+                    <p class="style-p">There is currently no vaccine to prevent coronavirus
                         disease 2019 (COVID-19). The best way to prevent illness is to avoid being exposed to this
                         virus. Stay aware of the latest information on the COVID-19 outbreak, available on the WHO
                         website and through your national and local public health authority.</p>
@@ -345,8 +372,8 @@
                         </div>
                     </div>
                     <div class="prevention-btns m-auto  wow fadeInDown">
-                        <button class="btn">Check how you wash hand <i class="fas fa-arrow-right"></i></button>
-                        <button class="about-btn">About COVID-19<i class="fas fa-arrow-right"></i></button>
+                       <a href="#follow-steps"><button class="btn">Check how you wash hand <i class="fas fa-arrow-right"></i></button></a>
+                        <a href="#"><button class="about-btn">About COVID-19<i class="fas fa-arrow-right"></i></button></a>
                     </div>
                 </div>
             </div>
@@ -409,12 +436,12 @@
     </section>
 
     <!--============================ Follow steps =====================-->
-    <section class="follow-steps">
+    <section class="follow-steps" id="follow-steps">
         <div class="my-container">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h2 class="col-12 text-center">Follow steps to wash hands</h2>
+                        <h2 class="style-h2 col-12 text-center">Follow steps to wash hands</h2>
                         <a href="#faq" class="text-center">Why do I need wash hand <span><i
                                     class="fas fa-arrow-right"></i></span></a>
                     </div>
@@ -423,27 +450,27 @@
                             <div class="row justify-content-between">
                                 <div class="follow-img col-6 col-md-4 col-lg-2">
                                     <img src="./img/hand-a.png" class="wow rotateIn" alt="">
-                                    <p>Soap on Hand</p>
+                                    <p class="style-p">Soap on Hand</p>
                                 </div>
                                 <div class="follow-img col-6 col-md-4 col-lg-2">
                                     <img src="./img/hand-b.png" class="wow rotateIn" alt="">
-                                    <p>Palm to Palm</p>
+                                    <p class="style-p">Palm to Palm</p>
                                 </div>
                                 <div class="follow-img col-6 col-md-4 col-lg-2">
                                     <img src="./img/hand-c.png" class="wow rotateIn" alt="">
-                                    <p>Between Fingers</p>
+                                    <p class="style-p">Between Fingers</p>
                                 </div>
                                 <div class="follow-img col-6 col-md-4 col-lg-2">
                                     <img src="./img/hand-d.png" class="wow rotateIn" alt="">
-                                    <p>Back to Hands</p>
+                                    <p class="style-p">Back to Hands</p>
                                 </div>
                                 <div class="follow-img col-6 col-md-4 col-lg-2">
                                     <img src="./img/hand-e.png" class="wow rotateIn" alt="">
-                                    <p>Clean with Water</p>
+                                    <p class="style-p">Clean with Water</p>
                                 </div>
                                 <div class="follow-img col-6 col-md-4 col-lg-2">
                                     <img src="./img/hand-f.png" class="wow rotateIn" alt="">
-                                    <p>Focus on Wrist</p>
+                                    <p class="style-p">Focus on Wrist</p>
                                 </div>
                             </div>
                         </div>
@@ -454,7 +481,7 @@
     </section>
 
     <!--=========================== TREATMENT ==========================-->
-    <section class="treatment">
+    <section class="treatment" id="treatment">
         <div class="my-container">
             <div class="container-fluid">
                 <div class="row">
@@ -507,7 +534,7 @@
     </section>
 
     <!--========================= Protect Your Self =======================-->
-    <section class="do-section">
+    <section class="do-section" id="do-section">
         <div class="my-container">
             <div class="do-text container-fluid">
                 <h3>do’s & don’ts</h3>
@@ -578,7 +605,7 @@
 
 
     <!--========================== LATEST UPDATE =================-->
-    <section class="last-update">
+    <section class="last-update" id="news">
         <div class="my-container">
             <div class="update-text">
                 <h3>RECENT FROM BLOG</h3>
