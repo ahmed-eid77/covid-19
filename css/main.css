@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .my-container {
@@ -12,7 +16,7 @@
 
 body {
     width: 100%;
-    height: auto;
+    
 }
 
 .none {
@@ -25,15 +29,18 @@ body {
     font-weight: 900;
     color: #50658e;
     text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+
 }
 
 .style-h3 {
-      color: #2a81ea;
+    color: #2a81ea;
     font-size: 18px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 7px;
     font-weight: bold;
+    font-family: 'Oswald', sans-serif;
 }
 
 .style-p {
@@ -57,9 +64,24 @@ body {
 }
 
 
+.page-up {
+    
+    z-index: 9999;
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    border-radius:10px;
+    background-color: #2b56f5;
+}
 
+.page-up a {
+    border-radius:10px;
+    color: white;
+}
 
-
+.page-up a i {
+    pointer-events: none;
+}
 /*=============================== */
 .navbar-toggler {
     padding: .25rem .75rem;
@@ -101,12 +123,23 @@ header .my-navbar {
 header .my-navbar .navbar-brand {
     text-transform: uppercase;
     color: #394B6C;
-
     font-weight: 900;
     font-size: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+header .my-navbar .navbar-brand i {
+    animation: rotation 4s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
 }
 
 header .my-navbar .navbar-brand span {
@@ -213,13 +246,33 @@ header .sm-navbar .blue-back{
 .home-section {
     width: 100%;
     padding: 80px 0 0 0;
-    background-color: #F7F9FE;
+    background-image: url(../img/shape-a.png);
+     background-size: cover 100% 100%;
 }
 
 .home-section .home-top-header {
-    text-align: center;
     width: 100%;
+}
 
+.home-section .home-top-header .text-head {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+   
+}
+.home-section .home-top-header .text-head > h2 {
+    font-size: 65px;
+    
+}
+
+.home-section .home-top-header .text-head span h3 {
+    font-size: 40px;
+    margin-top: 14px;
+}
+.home-section .home-top-header .text-head span h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #50658e;
 }
 
 .home-section .home-btns {
@@ -270,7 +323,7 @@ header .sm-navbar .blue-back{
 .home-section .img-container {
     width: 100%;
     height: 100%;
-    background-color: #F7F9FE;
+    background-color: transparent;
 
 }
 
@@ -302,7 +355,6 @@ header .sm-navbar .blue-back{
 }
 
 .about-section .about-txt h3 {
-
     font-size: 18px;
 }
 
@@ -336,6 +388,7 @@ header .sm-navbar .blue-back{
 }
 
 .about-section .about-list .card .card-header {
+    color: #465675;
     font-size: 20px;
     padding: 20px 30px;
     font-weight: bold;
@@ -739,30 +792,31 @@ header .sm-navbar .blue-back{
 }
 
 .do-section .do-text h2{
-    color: #50658e;
     font-size: 42px;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 25px;
 }
 
 .do-section .do-text h3 {
-    color: #2a81ea;
     font-size: 18px;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 7px;
-    font-weight: bold;
 }
 .do-section .do-text p {
-    color: #3d4b69;
-    line-height: 1.5em;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 .do-section .protect-imgs {
     margin: 100px auto 0;
     display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+.do-section .protect-imgs .protect-imgs1{
+    order: 1;
+}
+.do-section .protect-imgs .protect-imgs2{
+    order: 3;
+}
+.do-section .protect-imgs .protect-imgs3 {
+order: 2;
 }
 
 .do-section .protect-imgs .box {
@@ -772,7 +826,7 @@ header .sm-navbar .blue-back{
     margin-bottom: 40px;
     position: relative;
 }
-.do-section .protect-imgs3 .box{
+.do-section .protect-imgs .protect-imgs2 .box{
     justify-content: flex-start;
 }
 
@@ -782,12 +836,12 @@ header .sm-navbar .blue-back{
     font-size: 14px;
     margin-right: 20px;
 }
-.do-section .protect-imgs .protect-imgs3 p {
+.do-section .protect-imgs .protect-imgs2 p {
     margin-left: 20px;
 }
 
 .do-section .protect-imgs .box .img {
-    width: 30%;
+    width: 80px;
 }
 
 .do-section .protect-imgs .box .img img {
@@ -801,19 +855,19 @@ header .sm-navbar .blue-back{
     background-color: white;
     font-size: 20px;
     position: absolute;
-    top: 0;
+    top: 0%;
 }
 
 .do-section .protect-imgs .protect-imgs1 .box i {
     color: #f86168;
     left: 65%;
 }
-.do-section .protect-imgs .protect-imgs3 .box i {
+.do-section .protect-imgs .protect-imgs2 .box i {
     color: #3dca93;
     right: 65%;
 }
 
-.do-section .protect-imgs .protect-imgs2 img {
+.do-section .protect-imgs .protect-imgs3 img {
     width: 100%;
     height: 100%;
 }
@@ -945,7 +999,14 @@ footer{
 
 
 
-
+@media (min-width: 768px) {
+    .do-section .protect-imgs .protect-imgs1 .box i{
+        left: 75%;
+    }
+    .do-section .protect-imgs .protect-imgs2 .box i{
+        right: 75%;
+    }
+}
 
 
 
@@ -958,4 +1019,81 @@ footer{
     .my-container{
         width: 95%;
     }
+    /*================== home ===============*/
+    .home-section   p {
+        text-align: center;
+    } 
+    /*=================== about =================*/
+    .about-section .about-txt h2,
+    .about-section .about-txt h3 {
+        text-align: center;
+    }
+    .about-section .about-txt p {
+        text-align: center;
+        margin: 15px auto;
+    }
+   
+
+    /*=====================================================*/
+    .do-section .protect-imgs .protect-imgs1{
+        order: 2;
+    }
+    .do-section .protect-imgs .protect-imgs2{
+        margin-bottom: 10px;
+        order: 3;
+    }
+    .do-section .protect-imgs .protect-imgs3{
+        order: 1;
+    }
+    .do-section .protect-imgs .box .img{
+        width: 100%;
+    }
+    .do-section .protect-imgs .box .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .do-section .protect-imgs .protect-imgs3 img{
+        width: 100%;
+        height: 100%;
+    }
+    .do-section .protect-imgs .protect-imgs1 .box i{
+        left: 69%;
+    }
+    .do-section .protect-imgs .protect-imgs2 .box i{
+        right: 69%;
+    }
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
