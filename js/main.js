@@ -1,6 +1,6 @@
 // plugins
 var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 250
+    speed: 200
 })
 new WOW().init();
 
@@ -24,6 +24,7 @@ smNavbarListItem.children[2].addEventListener('click', closeNav);
 smNavbarListItem.children[3].addEventListener('click', closeNav);
 smNavbarListItem.children[4].addEventListener('click', closeNav);
 smNavbarListItem.children[5].addEventListener('click', closeNav);
+smNavbarListItem.children[6].addEventListener('click', closeNav);
 
 window.onscroll = function() {scrollFunction()};
 
@@ -50,7 +51,3 @@ function scrollFunction() {
     }
 }
 
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }
